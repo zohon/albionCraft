@@ -1,0 +1,300 @@
+// Variables for colors and spacing
+$primary-bg: #181a20;
+$secondary-bg: #23262f;
+$accent: #ffd600;
+$text: #f5f6fa;
+$border: #2f3136;
+$gap-lg: 32px;
+$gap-md: 16px;
+$gap-sm: 8px;
+
+.header {
+  background: $secondary-bg;
+  padding: $gap-md $gap-lg;
+  border-bottom: 1px solid $border;
+
+  form {
+    display: flex;
+    gap: $gap-md;
+    align-items: center;
+
+    label {
+      display: flex;
+      gap: $gap-md;
+      align-items: center;
+    }
+
+    select,
+    input {
+      appearance: none;
+      background: $primary-bg;
+      color: $text;
+      border: 1px solid $border;
+      border-radius: 6px;
+      padding: $gap-sm $gap-md;
+      font-size: 1rem;
+      transition: border 0.2s, box-shadow 0.2s;
+      outline: none;
+      cursor: pointer;
+
+      &:focus {
+        border-color: $accent;
+        box-shadow: 0 0 0 2px rgba($accent, 0.2);
+      }
+
+      option {
+        background: $primary-bg;
+        color: $text;
+      }
+    }
+  }
+}
+
+.main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-lg;
+  padding: $gap-lg 0;
+
+  .column {
+    display: flex;
+    justify-content: space-between;
+    gap: $gap-lg;
+
+    .columnItem {
+      display: flex;
+      flex-direction: column;
+      gap: $gap-lg;
+    }
+  }
+
+  .benef {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background-color: rgb(255, 255, 255);
+      top: 0;
+      left: 0;
+      border-radius: 6px;
+    }
+  }
+
+  .lowest,
+  .highest {
+    display: flex;
+    align-items: center;
+    gap: $gap-sm;
+    font-weight: 600;
+    color: $accent;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: $secondary-bg;
+    border-radius: 8px;
+    overflow: hidden;
+    th,
+    td {
+      padding: $gap-md;
+      text-align: left;
+    }
+    th {
+      background: $primary-bg;
+      color: $accent;
+      font-weight: 700;
+    }
+    tr {
+      border-bottom: 1px solid $border;
+    }
+    tr:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+    background: $secondary-bg;
+    border-radius: 8px;
+    border: 1px solid $border;
+    padding: $gap-lg;
+    position: relative;
+
+    .displayBenef {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 10px 15px;
+      background-color: rgba(255, 255, 255, 0.788);
+      color: #000;
+      border-top-right-radius: 5px;
+    }
+
+    .displayMedianBenef {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      padding: 10px 15px;
+      background-color: rgba(255, 255, 255, 0.788);
+      color: #000;
+    }
+
+    .costRender {
+      border: 1px solid #fff;
+      position: relative;
+      padding: 15px;
+      margin-top: 15px;
+      .costDisplay {
+        // background: green;
+        padding: 5px;
+        position: absolute;
+        top: -20px;
+        background-color: #23262f;
+        font-size: 23px;
+      }
+    }
+
+    .title {
+      margin-bottom: $gap-md;
+      display: flex;
+      align-items: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: $text;
+      gap: $gap-lg;
+    }
+
+    .costInfoList {
+      display: flex;
+      gap: $gap-sm;
+    }
+    .costInfo {
+      display: flex;
+      align-items: center;
+      gap: $gap-sm;
+
+      .costInfoText {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-sm;
+        justify-content: center;
+        color: $text;
+      }
+    }
+
+    .cities {
+      display: flex;
+      gap: $gap-md;
+      flex-wrap: wrap;
+    }
+
+    .cityInfo {
+      display: flex;
+      align-items: center;
+      padding: $gap-sm $gap-md;
+      border-radius: 4px;
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum";
+      white-space: pre;
+      background: $primary-bg;
+      color: $text;
+      font-size: 0.95rem;
+      border: 1px solid transparent;
+      transition: "background" 0.2s, color 0.2s;
+
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.18),
+        0 1.5px 4px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .city-bridgewatch {
+      background: #cabd08;
+      color: #555;
+    }
+    .city-blackmarket {
+      background: #000;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+    .city-brecilien {
+      background: #cf4ea4;
+      color: #fff;
+    }
+    .city-caerleon {
+      background: #e53935;
+      color: #fff;
+    }
+    .city-lymhurst {
+      background: #307f44;
+      color: #fff;
+    }
+    .city-martlock {
+      background: #0ab0b6;
+      color: #fff;
+    }
+    .city-thetford {
+      background: #ae00ff;
+      color: #fff;
+    }
+    .city-fortsterling {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .icon {
+      width: 75px;
+      height: 75px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 75px;
+        height: 75px;
+        object-fit: contain;
+        border-radius: 6px;
+        border: 1px solid $border;
+        background: $primary-bg;
+      }
+
+      &::before {
+        content: attr(data-quantity);
+        position: absolute;
+        z-index: 1;
+        background: #000c;
+        color: #fff;
+        bottom: 10px;
+        right: 10px;
+        padding: 2px 7px;
+        font-size: 0.85rem;
+        text-align: center;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+    }
+
+    .priceInfo {
+      display: flex;
+      gap: $gap-md;
+      flex-wrap: wrap;
+
+      .city {
+        min-width: 180px;
+        max-width: 250px;
+        flex: 1 1 180px;
+      }
+
+      .cityPrice {
+        display: flex;
+        gap: $gap-md;
+        align-items: center;
+      }
+    }
+  }
+}

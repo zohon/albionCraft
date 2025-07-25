@@ -1,0 +1,171 @@
+.header form {
+  display: flex;
+  gap: 15px;
+}
+
+.main {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  gap: 45px;
+  flex-direction: column;
+
+  .column {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .benef {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      z-index: -1;
+      top: 2px;
+      left: 0px;
+    }
+  }
+
+  .lowest {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  table {
+    th {
+      padding: 15px;
+    }
+
+    td {
+      padding: 0 15px;
+    }
+  }
+
+  .clock {
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-bottom: 1px solid #fff;
+    padding: 15px 0;
+
+    .title {
+      margin: 15px 0;
+      display: flex;
+    }
+
+    .costInfoList {
+      display: flex;
+      gap: 45px;
+    }
+    .costInfo {
+      display: flex;
+
+      .costInfoText {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+      }
+    }
+
+    .cities {
+      display: flex;
+      gap: 15px;
+    }
+
+    .cityInfo {
+      display: flex;
+      padding: 5px;
+      border-radius: 2px;
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum";
+      white-space: pre;
+    }
+
+    .highest {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .city-bridgewatch {
+      background-color: rgb(252, 235, 3);
+      color: rgb(85, 85, 85);
+    }
+
+    .city-blackmarket {
+      border: 1px solid white;
+      background-color: black;
+    }
+
+    .city-brecilien {
+      background-color: rgb(207, 78, 164);
+    }
+
+    .city-caerleon {
+      background-color: red;
+    }
+
+    .city-lymhurst {
+      background-color: rgb(48 127 68);
+    }
+
+    .city-martlock {
+      background-color: rgb(10, 176, 182);
+    }
+
+    .city-thetford {
+      background-color: rgb(174, 0, 255);
+    }
+
+    .city-fortsterling {
+      background-color: rgb(102, 102, 102);
+    }
+
+    .icon {
+      width: 75px;
+      position: relative;
+
+      img {
+        width: 75px;
+      }
+
+      &::before {
+        content: attr(data-quantity);
+        position: absolute;
+        z-index: 1;
+        background: #0000008f;
+        bottom: 14px !important;
+        right: 8px !important;
+        padding: 3px 5px;
+        text-align: center;
+        border-radius: 11px;
+      }
+    }
+
+    .priceInfo {
+      display: flex;
+      gap: 15px;
+
+      .city {
+        width: 250px;
+      }
+
+      .cityPrice {
+        display: flex;
+        gap: 15px;
+
+        .benef {
+        }
+      }
+    }
+  }
+}
