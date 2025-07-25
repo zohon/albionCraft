@@ -59,7 +59,7 @@ interface CleanItem {
 
 export default function Home() {
   //https://raw.githubusercontent.com/ao-data/ao-bin-dumps/refs/heads/master/formatted/items.json
-  let allNames = useEffect(() => {
+  let allNames: any = useEffect(() => {
     fetch(
       "https://raw.githubusercontent.com/ao-data/ao-bin-dumps/refs/heads/master/formatted/items.json"
     )
@@ -222,7 +222,7 @@ export default function Home() {
     },
   ];
 */
-  let itemsInfo = [
+  const itemsInfo = [
     {
       name: "MAIN_NATURESTAFF_CRYSTAL",
       label: "Forgebark Staff",
@@ -374,8 +374,8 @@ export default function Home() {
     },
   ];
 
-  let reduceItem = itemsInfo.reduce((acc, item) => {
-    const ressources = item.ressources.map(({ name, tier }) => {
+  let reduceItem = itemsInfo.reduce((acc: any, item: any) => {
+    const ressources = item.ressources.map(({ name, tier }: any) => {
       return {
         name,
         extra: "_LEVEL",
@@ -499,8 +499,8 @@ export default function Home() {
   const getName = (id: string) => {
     console.log("getName");
     return (
-      allNames?.find(
-        ({ LocalizationNameVariable }) => LocalizationNameVariable === id
+      allNames.find(
+        ({ LocalizationNameVariable }: any) => LocalizationNameVariable === id
       )["En-US"] ?? id
     );
   };
@@ -761,32 +761,34 @@ export default function Home() {
 
     if (!currentItem) return;
     console.log("CalculCost", id, currentItem.ressources);
-    const allPrice = currentItem.ressources?.map(({ name, quantity, tier }) => {
-      const currentRessource = items.find(
-        ({ name: ressourceName }) => ressourceName === name
-      );
-      if (currentRessource) {
-        const searchItem = allitems.filter(
-          ({ item_id }) =>
-            item_id === transformItemToCall(currentRessource, tier)
+    const allPrice = currentItem.ressources?.map(
+      ({ name, quantity, tier }: any) => {
+        const currentRessource = items.find(
+          ({ name: ressourceName }) => ressourceName === name
         );
+        if (currentRessource) {
+          const searchItem = allitems.filter(
+            ({ item_id }) =>
+              item_id === transformItemToCall(currentRessource, tier)
+          );
 
-        const lowBuy = searchItem
-          .filter(({ sell_price_min }) => sell_price_min > 0)
-          .toSorted((a, b) => a.sell_price_min - b.sell_price_min)[0];
+          const lowBuy = searchItem
+            .filter(({ sell_price_min }) => sell_price_min > 0)
+            .toSorted((a, b) => a.sell_price_min - b.sell_price_min)[0];
 
-        return {
-          name,
-          label: currentRessource?.label,
-          price: lowBuy?.sell_price_min,
-          city: lowBuy?.city,
-          quantity,
-        };
+          return {
+            name,
+            label: currentRessource?.label,
+            price: lowBuy?.sell_price_min,
+            city: lowBuy?.city,
+            quantity,
+          };
+        }
       }
-    });
+    );
 
     const totalCost = allPrice?.reduce(
-      (sum, val) => sum + (val?.price ?? 0) * (val?.quantity ?? 0),
+      (sum: any, val: any) => sum + (val?.price ?? 0) * (val?.quantity ?? 0),
       0
     );
 
@@ -866,7 +868,7 @@ export default function Home() {
             <select
               value={filtersState.tier}
               onChange={(e) =>
-                setFilters((f) => ({ ...f, tier: e.target.value }))
+                setFilters((f: any) => ({ ...f, tier: e.target.value }))
               }
             >
               <option value="3">T3</option>
@@ -994,7 +996,7 @@ export default function Home() {
         cost: cost?.cost,
         profit,
         costs: cost?.detail?.filter(
-          (d): d is NonNullable<typeof d> => d !== undefined
+          (d: any): d is NonNullable<typeof d> => d !== undefined
         ),
         buy: calcBuy(info),
         sell,
