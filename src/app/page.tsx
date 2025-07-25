@@ -497,9 +497,8 @@ export default function Home() {
   };
 
   const getName = (id: string) => {
-    console.log("getName");
     return (
-      allNames.find(
+      allNames?.find(
         ({ LocalizationNameVariable }: any) => LocalizationNameVariable === id
       )["En-US"] ?? id
     );
