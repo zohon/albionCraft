@@ -68,311 +68,328 @@ export default function Home() {
         allNames = data;
       });
   }, []);
-  /*
-  let itemsInfo = [
-    {
-      name: "MAIN_DAGGER",
-      label: "Dagger",
-      ressources: [
-        {
-          name: "METALBAR",
-          quantity: 12,
-        },
-        {
-          name: "LEATHER",
-          quantity: 12,
-        },
-      ],
-    },
-    {
-      name: "2H_DAGGERPAIR",
-      label: "Dagger Pair",
-      ressources: [
-        {
-          name: "METALBAR",
-          quantity: 16,
-        },
-        {
-          name: "LEATHER",
-          quantity: 16,
-        },
-      ],
-    },
-    {
-      name: "2H_CLAWPAIR",
-      label: "Claws",
-      ressources: [
-        {
-          name: "METALBAR",
-          quantity: 12,
-        },
-        {
-          name: "LEATHER",
-          quantity: 20,
-        },
-      ],
-    },
-    {
-      name: "MAIN_DAGGER_HELL",
-      label: "DemonFang",
-      ressources: [
-        {
-          name: "ARTEFACT_MAIN_DAGGER_HELL",
-          quantity: 1,
-        },
-        {
-          name: "METALBAR",
-          quantity: 12,
-        },
-        {
-          name: "LEATHER",
-          quantity: 12,
-        },
-      ],
-    },
-    {
-      name: "DAGGER_KATAR_AVALON",
-      label: "Bridled Fury",
-      ressources: [
-        {
-          name: "DAGGER_KATAR_AVALON",
-          quantity: 1,
-        },
-        {
-          name: "METALBAR",
-          quantity: 12,
-        },
-        {
-          name: "LEATHER",
-          quantity: 20,
-        },
-      ],
-    },
-    {
-      name: "2H_DAGGERPAIR_CRYSTAL",
-      label: "Twin Slayers",
-      ressources: [
-        {
-          name: "ARTEFACT_2H_DAGGERPAIR_CRYSTAL",
-          quantity: 1,
-        },
-        {
-          name: "METALBAR",
-          quantity: 16,
-        },
-        {
-          name: "LEATHER",
-          quantity: 16,
-        },
-      ],
-    },
-    {
-      name: "MAIN_RAPIER_MORGANA",
-      label: "Bloodletter",
-      ressources: [
-        {
-          name: "ARTEFACT_MAIN_RAPIER_MORGANA",
-          quantity: 1,
-        },
-        {
-          name: "METALBAR",
-          quantity: 16,
-        },
-        {
-          name: "LEATHER",
-          quantity: 8,
-        },
-      ],
-    },
-    {
-      name: "2H_DUALSICKLE_UNDEAD",
-      label: "Deathgivers",
-      ressources: [
-        {
-          name: "ARTEFACT_2H_DUALSICKLE_UNDEAD",
-          quantity: 1,
-        },
-        {
-          name: "METALBAR",
-          quantity: 16,
-        },
-        {
-          name: "LEATHER",
-          quantity: 16,
-        },
-      ],
-    },
-    {
-      name: "2H_DAGGER_KATAR_AVALON",
-      label: "Bridled Fury",
-      ressources: [
-        {
-          name: "ARTEFACT_2H_DAGGER_KATAR_AVALON",
-          quantity: 1,
-        },
-        {
-          name: "METALBAR",
-          quantity: 12,
-        },
-        {
-          name: "LEATHER",
-          quantity: 20,
-        },
-      ],
-    },
-  ];
-*/
-  const itemsInfo = [
-    {
-      name: "MAIN_NATURESTAFF_CRYSTAL",
-      label: "Forgebark Staff",
-      ressources: [
-        {
-          name: "ARTEFACT_MAIN_NATURESTAFF_CRYSTAL",
-          quantity: 1,
-        },
-        {
-          name: "PLANKS",
-          quantity: 16,
-        },
-        {
-          name: "CLOTH",
-          quantity: 8,
-        },
-      ],
-    },
-    {
-      name: "MAIN_NATURESTAFF_AVALON",
-      label: "Ironroot Staff",
-      ressources: [
-        {
-          name: "ARTEFACT_MAIN_NATURESTAFF_AVALON",
-          quantity: 1,
-        },
-        {
-          name: "PLANKS",
-          quantity: 16,
-        },
-        {
-          name: "CLOTH",
-          quantity: 8,
-        },
-      ],
-    },
-    {
-      name: "2H_NATURESTAFF_KEEPER",
-      label: "Rampant Staff",
-      ressources: [
-        {
-          name: "ARTEFACT_2H_NATURESTAFF_KEEPER",
-          quantity: 1,
-        },
-        {
-          name: "PLANKS",
-          quantity: 20,
-        },
-        {
-          name: "CLOTH",
-          quantity: 12,
-        },
-      ],
-    },
-    {
-      name: "MAIN_NATURESTAFF_KEEPER",
-      label: "Druidic Staff",
-      ressources: [
-        {
-          name: "ARTEFACT_MAIN_NATURESTAFF_KEEPER",
-          quantity: 1,
-        },
-        {
-          name: "PLANKS",
-          quantity: 16,
-        },
-        {
-          name: "CLOTH",
-          quantity: 8,
-        },
-      ],
-    },
-    {
-      name: "MAIN_NATURESTAFF",
-      label: "Nature Staff",
-      ressources: [
-        {
-          name: "PLANKS",
-          quantity: 16,
-        },
-        {
-          name: "CLOTH",
-          quantity: 8,
-        },
-      ],
-    },
-    {
-      name: "2H_NATURESTAFF",
-      label: "Great Nature Staff",
-      ressources: [
-        {
-          name: "PLANKS",
-          quantity: 20,
-        },
-        {
-          name: "CLOTH",
-          quantity: 12,
-        },
-      ],
-    },
-    {
-      name: "2H_NATURESTAFF_HELL",
-      label: "Blight Staff",
-      ressources: [
-        {
-          name: "ARTEFACT_2H_NATURESTAFF_HELL",
-          quantity: 1,
-        },
-        {
-          name: "PLANKS",
-          quantity: 20,
-        },
-        {
-          name: "CLOTH",
-          quantity: 12,
-        },
-      ],
-    },
-    {
-      name: "2H_WILDSTAFF",
-      label: "Wild Staff",
-      ressources: [
-        {
-          name: "PLANKS",
-          quantity: 20,
-        },
-        {
-          name: "CLOTH",
-          quantity: 12,
-        },
-      ],
-    },
 
-    {
-      name: "PLANKS",
-      label: "Plank",
-      ressources: [
-        {
-          name: "WOOD",
-          quantity: 3,
-        },
-        {
-          name: "PLANKS",
-          quantity: 1,
-          tier: -1,
-        },
-      ],
-      type: "ressource",
-    },
-  ];
+  /**
+   * Extracts all GET parameters from the current window location.
+   * Returns an object with key-value pairs.
+   */
+  const getParameters = useMemo(() => {
+    if (typeof window === "undefined") return {};
+    const params = new URLSearchParams(window.location.search);
+    const result: Record<string, string> = {};
+    params.forEach((value, key) => {
+      result[key] = value;
+    });
+    return result;
+  }, []);
+
+  let itemsInfo = [];
+  if (getParameters.type === "dagger") {
+    itemsInfo = [
+      {
+        name: "MAIN_DAGGER",
+        label: "Dagger",
+        ressources: [
+          {
+            name: "METALBAR",
+            quantity: 12,
+          },
+          {
+            name: "LEATHER",
+            quantity: 12,
+          },
+        ],
+      },
+      {
+        name: "2H_DAGGERPAIR",
+        label: "Dagger Pair",
+        ressources: [
+          {
+            name: "METALBAR",
+            quantity: 16,
+          },
+          {
+            name: "LEATHER",
+            quantity: 16,
+          },
+        ],
+      },
+      {
+        name: "2H_CLAWPAIR",
+        label: "Claws",
+        ressources: [
+          {
+            name: "METALBAR",
+            quantity: 12,
+          },
+          {
+            name: "LEATHER",
+            quantity: 20,
+          },
+        ],
+      },
+      {
+        name: "MAIN_DAGGER_HELL",
+        label: "DemonFang",
+        ressources: [
+          {
+            name: "ARTEFACT_MAIN_DAGGER_HELL",
+            quantity: 1,
+          },
+          {
+            name: "METALBAR",
+            quantity: 12,
+          },
+          {
+            name: "LEATHER",
+            quantity: 12,
+          },
+        ],
+      },
+      {
+        name: "DAGGER_KATAR_AVALON",
+        label: "Bridled Fury",
+        ressources: [
+          {
+            name: "DAGGER_KATAR_AVALON",
+            quantity: 1,
+          },
+          {
+            name: "METALBAR",
+            quantity: 12,
+          },
+          {
+            name: "LEATHER",
+            quantity: 20,
+          },
+        ],
+      },
+      {
+        name: "2H_DAGGERPAIR_CRYSTAL",
+        label: "Twin Slayers",
+        ressources: [
+          {
+            name: "ARTEFACT_2H_DAGGERPAIR_CRYSTAL",
+            quantity: 1,
+          },
+          {
+            name: "METALBAR",
+            quantity: 16,
+          },
+          {
+            name: "LEATHER",
+            quantity: 16,
+          },
+        ],
+      },
+      {
+        name: "MAIN_RAPIER_MORGANA",
+        label: "Bloodletter",
+        ressources: [
+          {
+            name: "ARTEFACT_MAIN_RAPIER_MORGANA",
+            quantity: 1,
+          },
+          {
+            name: "METALBAR",
+            quantity: 16,
+          },
+          {
+            name: "LEATHER",
+            quantity: 8,
+          },
+        ],
+      },
+      {
+        name: "2H_DUALSICKLE_UNDEAD",
+        label: "Deathgivers",
+        ressources: [
+          {
+            name: "ARTEFACT_2H_DUALSICKLE_UNDEAD",
+            quantity: 1,
+          },
+          {
+            name: "METALBAR",
+            quantity: 16,
+          },
+          {
+            name: "LEATHER",
+            quantity: 16,
+          },
+        ],
+      },
+      {
+        name: "2H_DAGGER_KATAR_AVALON",
+        label: "Bridled Fury",
+        ressources: [
+          {
+            name: "ARTEFACT_2H_DAGGER_KATAR_AVALON",
+            quantity: 1,
+          },
+          {
+            name: "METALBAR",
+            quantity: 12,
+          },
+          {
+            name: "LEATHER",
+            quantity: 20,
+          },
+        ],
+      },
+    ];
+  } else {
+    itemsInfo = [
+      {
+        name: "MAIN_NATURESTAFF_CRYSTAL",
+        label: "Forgebark Staff",
+        ressources: [
+          {
+            name: "ARTEFACT_MAIN_NATURESTAFF_CRYSTAL",
+            quantity: 1,
+          },
+          {
+            name: "PLANKS",
+            quantity: 16,
+          },
+          {
+            name: "CLOTH",
+            quantity: 8,
+          },
+        ],
+      },
+      {
+        name: "MAIN_NATURESTAFF_AVALON",
+        label: "Ironroot Staff",
+        ressources: [
+          {
+            name: "ARTEFACT_MAIN_NATURESTAFF_AVALON",
+            quantity: 1,
+          },
+          {
+            name: "PLANKS",
+            quantity: 16,
+          },
+          {
+            name: "CLOTH",
+            quantity: 8,
+          },
+        ],
+      },
+      {
+        name: "2H_NATURESTAFF_KEEPER",
+        label: "Rampant Staff",
+        ressources: [
+          {
+            name: "ARTEFACT_2H_NATURESTAFF_KEEPER",
+            quantity: 1,
+          },
+          {
+            name: "PLANKS",
+            quantity: 20,
+          },
+          {
+            name: "CLOTH",
+            quantity: 12,
+          },
+        ],
+      },
+      {
+        name: "MAIN_NATURESTAFF_KEEPER",
+        label: "Druidic Staff",
+        ressources: [
+          {
+            name: "ARTEFACT_MAIN_NATURESTAFF_KEEPER",
+            quantity: 1,
+          },
+          {
+            name: "PLANKS",
+            quantity: 16,
+          },
+          {
+            name: "CLOTH",
+            quantity: 8,
+          },
+        ],
+      },
+      {
+        name: "MAIN_NATURESTAFF",
+        label: "Nature Staff",
+        ressources: [
+          {
+            name: "PLANKS",
+            quantity: 16,
+          },
+          {
+            name: "CLOTH",
+            quantity: 8,
+          },
+        ],
+      },
+      {
+        name: "2H_NATURESTAFF",
+        label: "Great Nature Staff",
+        ressources: [
+          {
+            name: "PLANKS",
+            quantity: 20,
+          },
+          {
+            name: "CLOTH",
+            quantity: 12,
+          },
+        ],
+      },
+      {
+        name: "2H_NATURESTAFF_HELL",
+        label: "Blight Staff",
+        ressources: [
+          {
+            name: "ARTEFACT_2H_NATURESTAFF_HELL",
+            quantity: 1,
+          },
+          {
+            name: "PLANKS",
+            quantity: 20,
+          },
+          {
+            name: "CLOTH",
+            quantity: 12,
+          },
+        ],
+      },
+      {
+        name: "2H_WILDSTAFF",
+        label: "Wild Staff",
+        ressources: [
+          {
+            name: "PLANKS",
+            quantity: 20,
+          },
+          {
+            name: "CLOTH",
+            quantity: 12,
+          },
+        ],
+      },
+
+      {
+        name: "PLANKS",
+        label: "Plank",
+        ressources: [
+          {
+            name: "WOOD",
+            quantity: 3,
+          },
+          {
+            name: "PLANKS",
+            quantity: 1,
+            tier: -1,
+          },
+        ],
+        type: "ressource",
+      },
+    ];
+  }
 
   let reduceItem = itemsInfo.reduce((acc: any, item: any) => {
     const ressources = item.ressources.map(({ name, tier }: any) => {
